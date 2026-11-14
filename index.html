@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CricLive - Live Cricket Score</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a href="#" class="brand">Cric<span>Live</span></a>
+    <nav>
+      <a href="#live">Live Score</a>
+      <a href="#teams">Teams</a>
+      <a href="#table">Points Table</a>
+    </nav>
+  </div>
+</header>
+
+<section class="container" id="live">
+  <div class="match-card">
+    <p class="tag"><span class="dot"></span> LIVE &nbsp;|&nbsp; Match 34 &nbsp;|&nbsp; Wankhede Stadium, Mumbai</p>
+
+    <div class="teams-row">
+      <div class="team-box">
+        <img id="logoA" alt="Mumbai Indians">
+        <h2>Mumbai Indians</h2>
+        <p class="big"><span id="runs">0</span>/<span id="wkts">0</span></p>
+        <p class="small">Overs: <b id="overs">0.0</b></p>
+      </div>
+      <div class="vs">VS</div>
+      <div class="team-box">
+        <img id="logoB" alt="Chennai Super Kings">
+        <h2>Chennai Super Kings</h2>
+        <p class="big">186/6</p>
+        <p class="small">Overs: <b>20.0</b></p>
+      </div>
+    </div>
+
+    <p class="status" id="status"></p>
+
+    <div class="info">
+      <div><span>Run Rate</span><b id="crr">0.00</b></div>
+      <div><span>Required Rate</span><b id="rrr">0.00</b></div>
+      <div><span>Target</span><b>187</b></div>
+    </div>
+
+    <div class="over-box">
+      <span>This over:</span>
+      <div id="thisOver"></div>
+    </div>
+
+    <div class="buttons">
+      <button id="pauseBtn">Pause</button>
+      <button id="restartBtn">Restart</button>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="box">
+      <h3>Batting</h3>
+      <table>
+        <thead><tr><th>Batter</th><th>R</th><th>B</th><th>4s</th><th>6s</th></tr></thead>
+        <tbody id="batBody"></tbody>
+      </table>
+      <h3 style="margin-top:22px">Bowling</h3>
+      <table>
+        <thead><tr><th>Bowler</th><th>O</th><th>R</th><th>W</th></tr></thead>
+        <tbody id="bowlBody"></tbody>
+      </table>
+    </div>
+    <div class="box">
+      <h3>Commentary</h3>
+      <ul id="comm"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="teams">
+  <h2 class="title">IPL Teams</h2>
+  <div class="team-grid" id="teamGrid"></div>
+</section>
+
+<section class="container" id="table">
+  <h2 class="title">Points Table</h2>
+  <div class="box">
+    <table>
+      <thead><tr><th>#</th><th>Team</th><th>P</th><th>W</th><th>L</th><th>NRR</th><th>Pts</th></tr></thead>
+      <tbody id="pointsBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<footer>Made for college web project &copy; 2026 CricLive</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
